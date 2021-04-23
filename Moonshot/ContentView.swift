@@ -118,7 +118,7 @@ struct ContentView: View {
                             if showCrew {
                                 ForEach(mission.crew, id: \.name) {crew in
                                     Text(crew.getRealName(astronauts: astronauts))
-                                        .font(.system(size: 11))
+                                        .font(.system(size: 10))
                                 }
                             } else {
                                 Text(mission.formattedLaunchDate)
