@@ -126,6 +126,8 @@ struct ContentView: View {
 //                        }
                     }
                 }
+                .accessibilityElement(children: .ignore)
+                .accessibility(label: Text("mission.displayName"))
             }
             .navigationBarTitle("Moonshot")
             .navigationBarItems(trailing:

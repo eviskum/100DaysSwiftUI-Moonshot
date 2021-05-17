@@ -21,14 +21,16 @@ struct MissionView: View {
         GeometryReader { geo in
             ScrollView(.vertical) {
                 VStack {
-                    Image(self.mission.image)
+                    Image(decorative: self.mission.image)
                         .resizable()
                         .scaledToFit()
                         .frame(maxWidth: geo.size.width * 0.7)
                         .padding(.top)
+                        .accessibility(hidden: true)
                     
                     Text(self.mission.formattedLaunchDate)
                         .padding()
+                        .accessibility(label: Text("Launch data: \(self.mission.formattedLaunchDate)"))
                     
                     Text(self.mission.description)
                         .padding()
